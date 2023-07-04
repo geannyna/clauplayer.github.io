@@ -7,8 +7,65 @@ html, body {
 }
 body {
   font-family: sans-serif;
-  background-color: gray;
+  background-color: rgb(177, 177, 177);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.player{
+  min-width: 320px;
+  background-image: linear-gradient(45deg,grey,black,grey);
+  border-radius: 1rem;
+  padding: 2rem;
+  color: white;
+  box-shadow: 2px 2px 3px 2px gray;
+}
+
+.title{
+  margin-top: 0;
+  text-align: center;
+}
+.cover{
+  width: 230px;
+  height: 300px;
+  border-radius: .3rem;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.progress_container{
+  height: .6rem;
+  background-color: lightgray;
+  margin-bottom: 1rem;
+}
+.progress{
+  background-color: grey;
+  width: 40%;
+  height: 100%;
+}
+.controls{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+button{
+  background-color: transparent;
+  border:none;
+}
+.controls i{
+  font-size: 1.7em;
+  color: white;
+}
+.songs{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.songs li{
+  margin-bottom: .5rem;
+}
+.songs a{
+  color: white;
+  text-decoration: none;
 }
