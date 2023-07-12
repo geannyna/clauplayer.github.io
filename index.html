@@ -1,82 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Music Player</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="./css/micss.css">
-  <script src="js/mijs.js" defer></script>
-</head>
-<body>
-  <aside id="aside" class="aside">
-    <div class="close">x</div>
-    <div class="aside-container">
-      <p id="vol" class="vol">Volume</p>
-      <input 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="./css/micss.css" />
+    <link rel="shortcut icon" href="./img/logo.png" />
+  </head>
+  <body>
+    <aside id="aside" class="aside">
+      <div class="close">x</div>
+      <div class="aside-container">
+        <p id="vol" class="vol">Volume</p>
+        <input
           type="range"
           name="volumen"
           id="volume"
           min="0"
           max="1"
-          step=".01"
-          value=".05"
-          >
-          <p>Add to favorites</p>
-          <p>Add to playlist</p>
-          <p>Share</p>
-    </div>
-  </aside>
-  <main>
-    <audio 
+          step="0.01"
+          value="1"
+        />
+        <h1 class="playlist-title">Playlist</h1>
+        <ul id="playlist" class="playlist">
+          <!-- Aquí se genera la lista de canciones -->
+        </ul>
+       
+      </div>
+    </aside>
+    <main>
+      <audio
         id="audio"
-        src="./audio/behappy.mp3"
-        ontimeupdate="updateProgress()">
-      </audio>
-
+        src="./audio/Don't Worry Be Happy.mp3"
+        ontimeupdate="updateProgress();"
+      ></audio>
       <div class="wrapper">
         <header class="header">
-          <img 
+          <img
             id="config"
-            class="icon_dots"
-            src="./img/music1.png" alt="Icon dots">
-            <h1>Playing!</h1>
+            class="icon-dots"
+            src="./img/menu1.png"
+            alt="Icon dots"
+          />
+          <h1 class="title">Playing ...</h1>
         </header>
 
         <section class="cards">
-          <img id="cover" src="./assets/img/So Far Away.jpg" alt="Cover">
+          <img id="cover" src="./img/dukas.jpg" alt="Cover">
         </section>
         <section class="song">
           <div class="song-name">
-            <h2 id="title">Dear god - Avenged Sevenfold</h2>
+            <h2 id="title">Song title</h2>
           </div>
           <div class="progress-bar">
             <div id="start" class="start">0:00</div>
-            <!-- <div class="bar"></div> -->
             <progress id="progress" value="0" max="100"></progress>
             <div id="end" class="end">0:00</div>
           </div>
         </section>
         <footer class="buttons">
           <div class="bucle">
-            <img src="./assets/svg/btn-bucle.svg" alt="Bucle" />
+            <img src="./img/loop1.png" alt="Bucle" />
           </div>
           <div class="previous">
-            <img src="./assets/svg/btn-previous.svg" alt="Previous" />
+            <img src="./img/prev.png" alt="Previous" />
           </div>
           <div class="play" id="boton">
             <button id="play-pause" class="play-pause"></button>
           </div>
           <div class="next">
-            <img src="./assets/svg/btn-next.svg" alt="Next" />
+            <img src="./img/next.png" alt="Next" />
           </div>
           <div class="shift">
-            <img src="./assets/svg/btn-shift.svg" alt="Shift" />
+            <img src="./img/shuffle.png" alt="Shift" />
           </div>
         </footer>
       </div>
     </main>
 
     <script src="./js/main.js"></script>
-</body>
+  </body>
 </html>
