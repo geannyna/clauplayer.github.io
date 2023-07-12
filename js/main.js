@@ -4,7 +4,7 @@ const songs = [
 		"Eminem - Godzilla",
 		"I Feel Good",
 		"Liam Payne - Familiar",
-		"Talk Dirty - Jason Derulo",
+		"Jason Derulo - Talk Dirty",
  		"Brahms - Hungarian Dance",
 		"Dukas - The Sorcerer’s Apprentice",
 		"Sarasate - Gypsy Airs"
