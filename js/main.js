@@ -10,19 +10,19 @@ const songs = [
 		"Sarasate - Gypsy Airs"
 ]
 
-// const title = document.querySelector("#title");
-// const cover = document.querySelector("#cover");
-// const prevBtn = document.querySelector(".previous");
-// const nextBtn = document.querySelector(".next");
-// const shiftBtn = document.querySelector(".shift");
-// const bucleBtn = document.querySelector(".bucle");
-// const audio = document.getElementById("audio");
-// const config = document.getElementById("config");
-// const aside = document.getElementById("aside");
-// const main = document.querySelector("main");
-// const close = document.querySelector(".close");
-// const volume = document.getElementById("volume");
-// const playlist = document.getElementById("playlist");
+const title = document.querySelector("#title");
+const cover = document.querySelector("#cover");
+const prevBtn = document.querySelector(".previous");
+const nextBtn = document.querySelector(".next");
+const shiftBtn = document.querySelector(".shift");
+const bucleBtn = document.querySelector(".bucle");
+const audio = document.getElementById("audio");
+const config = document.getElementById("config");
+const aside = document.getElementById("aside");
+const main = document.querySelector("main");
+const close = document.querySelector(".close");
+const volume = document.getElementById("volume");
+const playlist = document.getElementById("playlist");
 
 // controla el inicio de la cancion
 let songIndex = 0;
@@ -32,17 +32,17 @@ loadSong(songs[songIndex]);
 
 
 // playlist
-// songs.forEach((song) => {
-//   const listItem = document.createElement("li");
-//   listItem.textContent = song;
-//   playlist.appendChild(listItem);
+songs.forEach((song) => {
+  const listItem = document.createElement("li");
+  listItem.textContent = song;
+  playlist.appendChild(listItem);
 
-//   // Evento clic para reproducir la canción
-//   listItem.addEventListener("click", () => {
-//     audio.src = `audio/${song}.mp3`;
-//     audio.play();
-//   });
-// });
+  // Evento clic para reproducir la canción
+  listItem.addEventListener("click", () => {
+    audio.src = `audio/${song}.mp3`;
+    audio.play();
+  });
+});
 
 // reproduce la cancion
 // function loadSong(song) {
