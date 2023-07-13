@@ -45,34 +45,34 @@ songs.forEach((song) => {
 });
 
 // reproduce la cancion
-// function loadSong(song) {
-// 	title.innerText = `${song}`;
-// 	audio.src = `./audio/${song}.mp3`;
-// 	cover.src = `./img/${song}.jpg`;
-//   console.log(audio.src);
-// }
+function loadSong(song) {
+	title.innerText = `${song}`;
+	audio.src = `./audio/${song}.mp3`;
+	cover.src = `./img/${song}.jpg`;
+  console.log(audio.src);
+}
 
 //Event listeners
-// var boton = document.getElementById("boton");
+var boton = document.getElementById("boton");
 
-// const updateProgress = () => {
-// 	if (audio.currentTime > 0) {
-// 		let barra = document.getElementById("progress");
-// 		barra.value = (audio.currentTime / audio.duration) * 100;
+const updateProgress = () => {
+	if (audio.currentTime > 0) {
+		let barra = document.getElementById("progress");
+		barra.value = (audio.currentTime / audio.duration) * 100;
 
-// 		var actualSegundos = audio.currentTime.toFixed(0);
-// 		actual = secondsToString(actualSegundos);
-// 		var duracionSegundos = audio.duration.toFixed(0) - audio.currentTime.toFixed(0);
-// 		dura = secondsToString(duracionSegundos);
+		var actualSegundos = audio.currentTime.toFixed(0);
+		actual = secondsToString(actualSegundos);
+		var duracionSegundos = audio.duration.toFixed(0) - audio.currentTime.toFixed(0);
+		dura = secondsToString(duracionSegundos);
 
-// 		document.getElementById("start").innerText = actual;
-// 		document.getElementById("end").innerText = dura;
-// 	}
+		document.getElementById("start").innerText = actual;
+		document.getElementById("end").innerText = dura;
+	}
 
-// 	if (audio.ended && bucleBtn.classList.contains("btn-active")) {
-// 		audio.currentTime = 0;
-// 		playSong();
-// 	}
+	if (audio.ended && bucleBtn.classList.contains("btn-active")) {
+		audio.currentTime = 0;
+		playSong();
+	}
 
 // 	if (audio.ended && shiftBtn.classList.contains("btn-active")) {
 // 		shiftSong();
