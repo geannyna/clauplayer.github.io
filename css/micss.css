@@ -35,12 +35,10 @@ html {
 
 .icon-dots {
   position: absolute;
-  height: 35px;
+  height: 45px;
   right: 0px;
   top: 20px;
   cursor: pointer;
-  padding: 5px;
-  padding-inline: 20px;
 }
 
 #playList {
@@ -48,11 +46,10 @@ html {
   position: absolute;
   z-index: 1;
   background: black;
-  border-radius: 10px;
   text-align: left;
   opacity: 0.8;
   color: var(--special);
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .title {
@@ -110,9 +107,9 @@ html {
   text-align: center;
 }
 
-.playlist-title{
-  margin-top: 10px;
-}
+/* .playlist-title{
+   margin-top: 10px; 
+} */
 .playlist{
   margin-top: 15px;
   cursor: pointer;
@@ -284,7 +281,7 @@ html {
 }
 
 .bucle:hover::after {
-  content: "Bucle";
+  content: "Loop";
 }
 
 .previous:hover::after {
@@ -416,7 +413,7 @@ progress::-moz-progress-bar {
   margin: 10px auto 20px;
   cursor: pointer;
   min-width: 130px;
-  width: 80%;
+  width: 70%;
 }
 
 input[type=range] {

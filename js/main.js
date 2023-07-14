@@ -49,6 +49,11 @@ function loadSong(song) {
 	title.innerText = `${song}`;
 	audio.src = `./audio/${song}.mp3`;
 	cover.src = `./img/${song}.jpg`;
+
+	 // controla el error de carga de la imagen
+	 cover.onerror = function() {
+   cover.src = './img/music.png'; // Ruta de la imagen de respaldo
+  };
   console.log(audio.src);
 }
 
@@ -142,83 +147,83 @@ function nextSong() {
 	console.log(`Item ${songIndex}`);
 }
 
-// Shift songs
-// function shiftSong() {
-// 	function numeroAleatorio(min, max) {
-// 		let numero = Math.round(Math.random() * (max - min) + min);
-// 		function newMixSong(n) {
-// 			songIndex = n;
-// 			loadSong(songs[songIndex]);
-// 			document.getElementById("play-pause").classList.toggle("button-play-pause");
-// 			playSong();
-// 			console.log(`Canción número: ${songIndex} del array`);
-// 		}
-// 		newMixSong(numero);
-// 	}
-// 	numeroAleatorio(0, songs.length - 1);
-// }
+// shift songs
+function shiftSong() {
+	function numeroAleatorio(min, max) {
+		let numero = Math.round(Math.random() * (max - min) + min);
+		function newMixSong(n) {
+			songIndex = n;
+			loadSong(songs[songIndex]);
+			document.getElementById("play-pause").classList.toggle("button-play-pause");
+			playSong();
+			console.log(`Canción número: ${songIndex} del array`);
+		}
+		newMixSong(numero);
+	}
+	numeroAleatorio(0, songs.length - 1);
+}
 
-// Bucle button
-// bucleBtn.addEventListener("click", bucle);
-// function bucle() {
-// 	bucleBtn.classList.toggle("btn-active");
-// }
+// bucle button
+bucleBtn.addEventListener("click", bucle);
+function bucle() {
+	bucleBtn.classList.toggle("btn-active");
+}
 
-// // Shift button
-// shiftBtn.addEventListener("click", shift);
-// function shift() {
-// 	shiftBtn.classList.toggle("btn-active");
-// }
+// shift button
+shiftBtn.addEventListener("click", shift);
+function shift() {
+	shiftBtn.classList.toggle("btn-active");
+}
 
-// Convert seconds to string
-// function secondsToString(seconds) {
-// 	var hour = "";
-// 	if (seconds > 3600) {
-// 		hour = Math.floor(seconds / 3600);
-// 		hour = hour < 10 ? "0" + hour : hour;
-// 		hour += ":";
-// 	}
-// 	var minute = Math.floor((seconds / 60) % 60);
-// 	minute = minute < 10 ? "0" + minute : minute;
-// 	var second = seconds % 60;
-// 	second = second < 10 ? "0" + second : second;
-// 	return hour + minute + ":" + second;
-// }
+// convierte seconds to string
+function secondsToString(seconds) {
+	var hour = "";
+	if (seconds > 3600) {
+		hour = Math.floor(seconds / 3600);
+		hour = hour < 10 ? "0" + hour : hour;
+		hour += ":";
+	}
+	var minute = Math.floor((seconds / 60) % 60);
+	minute = minute < 10 ? "0" + minute : minute;
+	var second = seconds % 60;
+	second = second < 10 ? "0" + second : second;
+	return hour + minute + ":" + second;
+}
 
 // Progress bar
-// progress.addEventListener("click", adelantar);
-// function adelantar(e) {
-// 	const scrubTime = (e.offsetX / progress.offsetWidth) * audio.duration;
-// 	audio.currentTime = scrubTime;
+progress.addEventListener("click", adelantar);
+function adelantar(e) {
+	const scrubTime = (e.offsetX / progress.offsetWidth) * audio.duration;
+	audio.currentTime = scrubTime;
 	
-// }
+}
 
 // Drop down side panel
-// config.addEventListener(
-// 	"click",
-// 	() => {
-// 		setTimeout(() => {
-// 			aside.classList.toggle("aside-toggle");
-// 			main.classList.toggle("filter");
-// 		});
-// 	},
-// 	0
-// );
+config.addEventListener(
+	"click",
+	() => {
+		setTimeout(() => {
+			aside.classList.toggle("aside-toggle");
+			main.classList.toggle("filter");
+		});
+	},
+	0
+);
 
-// close.addEventListener("click", () => {
-// 	aside.classList.toggle("aside-toggle");
-// 	main.classList.toggle("filter");
-// });
+close.addEventListener("click", () => {
+	aside.classList.toggle("aside-toggle");
+	main.classList.toggle("filter");
+});
 
-// main.addEventListener("click", () => {
-// 	if (aside.classList.contains("aside-toggle")) {
-// 		aside.classList.remove("aside-toggle");
-// 		main.classList.remove("filter");
-// 	}
-// });
+main.addEventListener("click", () => {
+	if (aside.classList.contains("aside-toggle")) {
+		aside.classList.remove("aside-toggle");
+		main.classList.remove("filter");
+	}
+});
 
 // Volume
-// volume.oninput = (e) => {
-// 	const vol = e.target.value;
-// 	audio.volume = vol;
-// };
+volume.oninput = (e) => {
+	const vol = e.target.value;
+	audio.volume = vol;
+};
