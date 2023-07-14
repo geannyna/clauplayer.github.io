@@ -87,14 +87,14 @@ const updateProgress = () => {
 	}
 };
 
-// Play & Pause boton
-// boton.addEventListener("click", function () {
-// 	if (audio.paused) {
-// 		playSong();
-// 	} else {
-// 		pauseSong();
-// 	}
-// });
+// play & pause boton
+boton.addEventListener("click", function () {
+	if (audio.paused) {
+		playSong();
+	} else {
+		pauseSong();
+	}
+});
 
 // function playSong() {
 	// el play es asincrono, setTimeout ayuda a evitar errores
