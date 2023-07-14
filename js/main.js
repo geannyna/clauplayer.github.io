@@ -154,7 +154,7 @@ function shiftSong() {
 		function newMixSong(n) {
 			songIndex = n;
 			loadSong(songs[songIndex]);
-			document.getElementById("play-pause").classList.toggle("button-play-pause");
+			document.getElementById("play-pause").classList.toggle("button--pause");
 			playSong();
 			console.log(`Canción número: ${songIndex} del array`);
 		}
