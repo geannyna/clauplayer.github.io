@@ -217,8 +217,8 @@ html {
 }
 
 .play-pause {
-  height: 40px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
   background-color: transparent;
   background-image: url('/img/play.png');
   background-position: center;
