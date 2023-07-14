@@ -220,7 +220,7 @@ html {
   height: 35px;
   width: 35px;
   background-color: transparent;
-  background-image: url('../img/play.png');
+  background-image: url('/img/play.png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -233,7 +233,7 @@ html {
   height: 33px;
   width: 33px;
   background-color: transparent;
-  background-image: url('../img/pause.png');
+  background-image: url('/img/pause.png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
