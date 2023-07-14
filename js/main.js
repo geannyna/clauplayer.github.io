@@ -222,7 +222,7 @@ main.addEventListener("click", () => {
 	}
 });
 
-// Volume
+// Volume aside
 volume.oninput = (e) => {
 	const vol = e.target.value;
 	audio.volume = vol;
