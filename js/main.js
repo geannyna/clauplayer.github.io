@@ -74,18 +74,18 @@ const updateProgress = () => {
 		playSong();
 	}
 
-// 	if (audio.ended && shiftBtn.classList.contains("btn-active")) {
-// 		shiftSong();
-// 	}
+	if (audio.ended && shiftBtn.classList.contains("btn-active")) {
+		shiftSong();
+	}
 
-// 	if (
-// 		audio.ended &&
-// 		!bucleBtn.classList.contains("btn-active") &&
-// 		!shiftBtn.classList.contains("btn-active")
-// 	) {
-// 		nextSong();
-// 	}
-// };
+	if (
+		audio.ended &&
+		!bucleBtn.classList.contains("btn-active") &&
+		!shiftBtn.classList.contains("btn-active")
+	) {
+		nextSong();
+	}
+};
 
 // Play & Pause boton
 // boton.addEventListener("click", function () {
