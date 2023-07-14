@@ -113,34 +113,34 @@ function pauseSong() {
 }
 
 // controles de los botones next y prev
-// prevBtn.addEventListener("click", prevSong);
-// nextBtn.addEventListener("click", nextSong);
+prevBtn.addEventListener("click", prevSong);
+nextBtn.addEventListener("click", nextSong);
 
-// function prevSong() {
-// 	songIndex--;
-// 	if (songIndex < 0) {
-// 		songIndex = songs.length - 1;
-// 	}
-// 	loadSong(songs[songIndex]);
-// 	playSong();
-// 	console.log(`Item ${songIndex}`);
-// }
+function prevSong() {
+	songIndex--;
+	if (songIndex < 0) {
+		songIndex = songs.length - 1;
+	}
+	loadSong(songs[songIndex]);
+	playSong();
+	console.log(`Item ${songIndex}`);
+}
 
 
-// function nextSong() {
-// 	if (shiftBtn.classList.contains("btn-active")) {
-// 		shiftSong();
-// 	}
+function nextSong() {
+	if (shiftBtn.classList.contains("btn-active")) {
+		shiftSong();
+	}
 
-// 	songIndex++;
-// 	if (songIndex > songs.length - 1) {
-// 		songIndex = 0;
-// 	}
-// 	loadSong(songs[songIndex]);
-// 	document.getElementById("play-pause").classList.toggle("button-play-pause");
-// 	playSong();
-// 	console.log(`Item ${songIndex}`);
-// }
+	songIndex++;
+	if (songIndex > songs.length - 1) {
+		songIndex = 0;
+	}
+	loadSong(songs[songIndex]);
+	document.getElementById("play-pause").classList.toggle("button-play-pause");
+	playSong();
+	console.log(`Item ${songIndex}`);
+}
 
 // Shift songs
 // function shiftSong() {
