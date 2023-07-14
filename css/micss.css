@@ -1,4 +1,4 @@
- /* :root {
+  :root {
   --fond:#1f0230;
   --special: #CE82FF;
 }
@@ -635,4 +635,4 @@ input[type=range]:focus::-ms-fill-upper {
   .aside-toggle{
       right: 0;
   }
-}  */
+}  

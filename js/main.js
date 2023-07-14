@@ -96,21 +96,21 @@ boton.addEventListener("click", function () {
 	}
 });
 
-// function playSong() {
-	// el play es asincrono, setTimeout ayuda a evitar errores
-// 	setTimeout(function () {
-// 		audio.play();
-// 	}, 0);
+function playSong() {
+	//el play es asincrono, setTimeout ayuda a evitar errores
+	setTimeout(function () {
+		audio.play();
+	}, 0);
 
-// 	document.getElementById("play-pause").classList.add("button-play-pause");
-// 	document.getElementById("play-pause").classList.remove("play-pause");
-// }
+	document.getElementById("play-pause").classList.add("button-play-pause");
+	document.getElementById("play-pause").classList.remove("play-pause");
+}
 
-// function pauseSong() {
-// 	audio.pause();
-// 	document.getElementById("play-pause").classList.remove("button-play-pause");
-// 	document.getElementById("play-pause").classList.add("play-pause");
-// }
+function pauseSong() {
+	audio.pause();
+	document.getElementById("play-pause").classList.remove("button-play-pause");
+	document.getElementById("play-pause").classList.add("play-pause");
+}
 
 // controles de los botones next y prev
 // prevBtn.addEventListener("click", prevSong);
