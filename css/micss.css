@@ -35,9 +35,17 @@ html {
 
 .icon-dots {
   position: absolute;
-  height: 45px;
+  height: 35px;
   right: 0px;
   top: 20px;
+  cursor: pointer;
+}
+
+.arrow{
+  position: absolute;
+  height: 30px;
+  left: 10px;
+  top: 25px;
   cursor: pointer;
 }
 
