@@ -10,6 +10,18 @@ const songs = [
 		"Sarasate - Gypsy Airs"
 ]
 
+const songImages = {
+	"Don't Worry Be Happy": "./img/dont_worry_be_happy.jpg",
+	"50 Cent - P.I.M.P": "./img/logo.png",
+	"Eminem - Godzilla": "./img/music.png",
+	"I Feel Good": "./img/i_feel_good.jpg",
+	"Liam Payne - Familiar": "./img/music.png",
+	"Jason Derulo - Talk Dirty": "./img/music.png",
+	"Brahms - Hungarian Dance": "./img/brahms_hungarian_dance.jpg",
+	"Dukas - The Sorcerer’s Apprentice": "./img/dukas_sorcerers_apprentice.jpg",
+	"Sarasate - Gypsy Airs": "./img/sarasate_gypsy_airs.jpg"
+};
+
 const title = document.querySelector("#title");
 const cover = document.querySelector("#cover");
 const prevBtn = document.querySelector(".previous");
@@ -35,12 +47,14 @@ loadSong(songs[songIndex]);
 songs.forEach((song) => {
   const listItem = document.createElement("li");
   listItem.textContent = song;
+	listItem.songImage = songImages[song] ;
   playlist.appendChild(listItem);
 
   // Evento clic para reproducir la canción
   listItem.addEventListener("click", () => {
     audio.src = `audio/${song}.mp3`;
     audio.play();
+		loadSong(song);
   });
 });
 
@@ -48,7 +62,7 @@ songs.forEach((song) => {
 function loadSong(song) {
 	title.innerText = `${song}`;
 	audio.src = `./audio/${song}.mp3`;
-	cover.src = `./img/${song}.jpg`;
+	cover.src = songImages[song] || `./img/${songImage}.jpg`;
 
 	 // controla el error de carga de la imagen
 	 cover.onerror = function() {
