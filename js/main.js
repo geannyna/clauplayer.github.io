@@ -12,11 +12,11 @@ const songs = [
 
 const songImages = {
 	"Don't Worry Be Happy": "./img/dont_worry_be_happy.jpg",
-	"50 Cent - P.I.M.P": "./img/logo.png",
-	"Eminem - Godzilla": "./img/music.png",
+	"50 Cent - P.I.M.P": "./img/music.jpg",
+	"Eminem - Godzilla": "./img/music.jpg",
 	"I Feel Good": "./img/i_feel_good.jpg",
-	"Liam Payne - Familiar": "./img/music.png",
-	"Jason Derulo - Talk Dirty": "./img/music.png",
+	"Liam Payne - Familiar": "./img/music.jpg",
+	"Jason Derulo - Talk Dirty": "./img/music.jpg",
 	"Brahms - Hungarian Dance": "./img/brahms_hungarian_dance.jpg",
 	"Dukas - The Sorcerer’s Apprentice": "./img/dukas_sorcerers_apprentice.jpg",
 	"Sarasate - Gypsy Airs": "./img/sarasate_gypsy_airs.jpg"
@@ -62,7 +62,7 @@ songs.forEach((song) => {
 function loadSong(song) {
 	title.innerText = `${song}`;
 	audio.src = `./audio/${song}.mp3`;
-	cover.src = songImages[song] || `./img/${songImage}.jpg`;
+	cover.src = songImages[song] || `./img/${songImages}.jpg`;
 
 	 // controla el error de carga de la imagen
 	 cover.onerror = function() {
